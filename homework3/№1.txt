@@ -1,0 +1,6 @@
+Предложения по усовершенствованию vk:
+* users - добавить поле password VARCHAR(100) NOT NULL, phone сделать VARCHAR(20)
+* profiles - city и country сделать INT(10) и создать для них отдельную таблицу
+* messages - добавить поле is_read BOOLEAN NOT NULL DEFAULT '0'
+* friendship_statuses - кажется что поля created_at и updated_at тут излишни
+* в communities можно добавить поля photo_id INT UNSIGNED, description VARCHAR(255), is_moderated BOOLEAN NOT NULL DEFAULT 0 (доступно для всех или нет), category TINYINT(3) UNSIGNED и создать таблицу с категориями сообществ
