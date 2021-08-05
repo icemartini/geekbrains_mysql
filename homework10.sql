@@ -45,7 +45,7 @@ SELECT DISTINCT
 	MIN(cu.user_id) OVER(PARTITION BY cu.community_id) AS youngest,
 	MAX(cu.user_id) OVER(PARTITION BY cu.community_id) AS oldest,
 	COUNT(cu.user_id) OVER(PARTITION BY cu.community_id) AS users_in_group,
-	COUNT(u.id) OVER () AS users_total,
+	SELECT COUNT(*) FROM users AS users_total,
 	COUNT(cu.user_id) OVER(PARTITION BY cu.community_id) / COUNT(u.id) OVER () * 100 AS '%'
 FROM communities c
 	LEFT JOIN communities_users cu 
