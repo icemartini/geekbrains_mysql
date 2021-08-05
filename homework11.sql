@@ -31,7 +31,7 @@ FOR EACH ROW
 
 -- 2. (по желанию) Создайте SQL-запрос, который помещает в таблицу users миллион записей.
 
-DROP PROCEDURE IF EXISTS billionusers; 
+DROP PROCEDURE IF EXISTS makeusers;
 
 DELIMITER //
 CREATE PROCEDURE makeusers (IN num INT)
